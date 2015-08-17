@@ -31,7 +31,15 @@
 	
 	App.controller('firstController', function($scope, $http, $routeParams) {
 			
+        $http.get('').
+        success(function(data, status, headers, config) {
+            console.log("success");
+            $scope.data = data;
+        }).
+        error(function(data, status, headers, config) {
+            console.log("error");
+        });
 
-	
+	 
 	}); 
   
